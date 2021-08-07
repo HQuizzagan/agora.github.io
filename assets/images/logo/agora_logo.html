@@ -1,12 +1,26 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+ <style>
+    .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        /* animation: dash 5s linear forwards; */
+        animation: dash 5s linear alternate infinite;
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+ </style>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="815.000000pt" height="306.000000pt" viewBox="0 0 815.000000 306.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,306.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="#ffffff" stroke="#000000" stroke-width="10" class="path">
 <path d="M1492 2261 c-6 -3 -25 -45 -42 -91 -17 -47 -37 -98 -44 -115 -7 -16
 -32 -79 -54 -140 -170 -469 -194 -526 -228 -556 -11 -9 -45 -20 -77 -24 -32
 -3 -57 -8 -55 -10 10 -8 360 -16 354 -7 -3 5 -35 13 -72 17 -45 5 -67 12 -71
