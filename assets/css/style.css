@@ -1,14 +1,5 @@
-/* 
-
-TemplateMo 562 Space Dynamic
-
-https://templatemo.com/tm-562-space-dynamic
-
-*/
-
 /* ---------------------------------------------
 Table of contents
-------------------------------------------------
 01. font & reset css
 02. reset
 03. global styles
@@ -21,9 +12,6 @@ Table of contents
 10. preloader
 11. search
 12. portfolio
-
---------------------------------------------- */
-/* 
 ---------------------------------------------
 font & reset css
 --------------------------------------------- 
@@ -35,7 +23,7 @@ reset
 --------------------------------------------- 
 */
 :root {
-  --agora-red: #bc0000;
+  --agora-red: #fe3f40;
   --agora-blue: #124F7D;
   --agora-yellow: #ff8811;
   --agora-black: #000000;
@@ -100,6 +88,12 @@ ul, li {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+small {
+  display: block;
+  font-size: 8px;
+  text-align: center;
 }
 
 header, nav, section, article, aside, footer, hgroup {
@@ -943,7 +937,6 @@ Banner Style
 }
 
 
-
 /* 
 ---------------------------------------------
 About Us Style
@@ -954,40 +947,51 @@ About Us Style
   margin-top: 120px;
 }
 
-.about-us {
+/* .about-us {
   background-image: url(../images/about-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 140px 0px 120px 0px;
+} */
+
+.about-us {
+  background-color: var(--agora-red);
+  /* background-color: #fe3f40; */
+  color: #fff;
+  text-align: center;
+  height: auto;
 }
 
 .about-us .left-image {
-  margin-right: 45px;
+  transform: scale(1.5);
 }
 
 .about-us .services .item {
   margin-bottom: 30px;
 }
 
-.about-us .services .item .icon {
+/* .about-us .services .item .icon {
   float: left;
   margin-right: 25px;
 }
 
 .about-us .services .item .icon img {
   max-width: 70px;
-}
+} */
 
-.about-us .services .item h4 {
+.about-us .services .item h1 {
   color: #fff;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .about-us .services .item p {
   color: #fff;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 2rem;
 }
 
 
@@ -1068,15 +1072,19 @@ Services Style
 }
 
 .our-services .first-bar .filled-bar {
-  width: 71%;
+  width: 25%;
 }
 
 .our-services .second-bar .filled-bar {
-  width: 83%;
+  width: 50%;
 }
 
 .our-services .third-bar .filled-bar {
-  width: 90%;
+  width: 75%;
+}
+
+.our-services .fourth-bar .filled-bar {
+  width: 100%;
 }
 
 
@@ -1104,7 +1112,7 @@ Portfolio
 }
 
 .our-portfolio .item:hover .hidden-content {
-  top: -100px;
+  top: -165px;
   opacity: 1;
   visibility: visible;
 }
@@ -1158,7 +1166,7 @@ Portfolio
   z-index: 3;
   background-color: #fff;
   text-align: center;
-  padding: 50px;
+  padding: 70px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   transition: all 0.5s;
@@ -1179,6 +1187,7 @@ Blog
   position: relative;
   margin-top: 80px;
   padding-top: 120px;
+  padding-bottom: 150px;
 }
 
 .our-blog .section-heading h2 {
@@ -1256,6 +1265,9 @@ Blog
   display: inline-flex;
   width: 100%;
   margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  padding: 25px;
 }
 
 .our-blog .right-list .left-content {
@@ -1475,9 +1487,12 @@ responsive
   }
   .about-us .left-image {
     margin-right: 0px;
-    position: absolute;
-    bottom: -220px;
-    right: 0;
+    position: relative;
+    bottom: -200px;
+    /* right: 0;
+    border: 2px solid blue; */
+    width: 100%;
+    height: auto;
   }
   .about-us .services {
     text-align: center;
@@ -1554,7 +1569,11 @@ responsive
 
 @media (max-width: 767px) {
   .about-us .left-image {
-    bottom: -280px;
+    bottom: -100px;
+    /* left: -50px; */
+    width: 100%;
+    height: auto;
+    /* transform: rotate(-30deg); */
   }
   .our-blog .right-list {
     margin-left: 0px;
